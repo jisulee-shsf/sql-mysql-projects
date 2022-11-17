@@ -74,10 +74,10 @@ SELECT sub_category
      , ROUND(sum_sales / cnt_orders, 2) AS per_sales
      , ROUND(sum_sales, 2) AS sub_category_sales
      , ROUND(sum_sales * 100 / SUM(sum_sales) OVER (), 2) AS pct_sub_category_sales
-     , CASE WHEN sum_discnt >= AVG(sum_discnt) OVER() THEN 1 ELSE 0 END AS above_avg_discnt
+     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking
      , ROUND(sum_discnt, 2) AS sub_category_discnt
      , ROUND(sum_discnt * 100 / SUM(sum_discnt) OVER (), 2) AS pct_sub_category_discnt
-     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking
+     , CASE WHEN sum_discnt >= AVG(sum_discnt) OVER() THEN 1 ELSE 0 END AS above_avg_discnt
 FROM (SELECT sub_category
            , SUM(sales) AS sum_sales
            , SUM(discount) AS sum_discnt
