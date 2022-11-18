@@ -79,7 +79,7 @@ FROM (SELECT order_month
            , COUNT(DISTINCT customer_id) AS aug_orders
       FROM order_records
       WHERE first_order_month = '2020-08-01' AND first_order_month != order_month
-      GROUP BY 1) tbl;
+      GROUP BY 1) tbl
 )
 
 SELECT order_month
