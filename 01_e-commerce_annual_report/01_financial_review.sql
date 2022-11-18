@@ -101,4 +101,4 @@ FROM (SELECT sub_category
            , COUNT(customer_id) AS cnt_orders
       FROM order_records
       GROUP BY 1) tbl
-ORDER BY ranking_sales;
+ORDER BY ranking_discnt;
