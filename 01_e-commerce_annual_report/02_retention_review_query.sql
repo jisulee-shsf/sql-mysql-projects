@@ -14,7 +14,7 @@ FROM records r
 INNER JOIN customer_stats c ON r.customer_id = c.customer_id
 )
 
--- 2-1. 클래식 리텐션 분석 - cnt
+-- 2. 클래식 리텐션 분석
 SELECT first_order_month
      , COUNT(DISTINCT customer_id) AS cnt_month0
      , COUNT(DISTINCT CASE WHEN DATE_ADD(first_order_month, INTERVAL 1 MONTH) = order_month THEN customer_id END) AS cnt_month1
@@ -31,7 +31,6 @@ SELECT first_order_month
 FROM order_records
 GROUP BY 1;
 
--- 2-2. 클래식 리텐션 분석 - cnt / pct
 SELECT first_order_month
      , COUNT(DISTINCT customer_id) AS cnt_month0
      , ROUND(COUNT(DISTINCT CASE WHEN DATE_ADD(first_order_month, INTERVAL 1 MONTH) = order_month THEN customer_id END) * 100 / COUNT(DISTINCT customer_id), 2) AS pct_month1
@@ -48,7 +47,6 @@ SELECT first_order_month
 FROM order_records
 GROUP BY 1;
 
--- 2-3. 클래식 리텐션 분석 - 할인 적용 수치
 SELECT order_month
      , cnt_orders
      , ROUND(avg_discnt * 100, 2) AS avg_discnt
@@ -60,7 +58,6 @@ FROM (SELECT order_month
       WHERE first_order_month = '2020-08-01'
       GROUP BY 1) tbl;
 
--- 2-4. 클래식 리텐션 분석 - 구매 시기
 WITH order_records AS (
 SELECT r.customer_id
      , r.category
@@ -82,7 +79,7 @@ FROM (SELECT order_month
            , COUNT(DISTINCT customer_id) AS aug_orders
       FROM order_records
       WHERE first_order_month = '2020-08-01' AND first_order_month != order_month
-      GROUP BY 1) tbl
+      GROUP BY 1) tbl;
 )
 
 SELECT order_month
@@ -99,7 +96,7 @@ FROM (SELECT o.order_month
       WHERE o.order_month >= '2020-09-01'
       GROUP BY 1) tbl;
 
--- 3-1. 롤링 리텐션 분석 - cnt
+-- 3. 롤링 리텐션 분석
 SELECT first_order_month
      , COUNT(DISTINCT customer_id) AS cnt_month0
      , COUNT(DISTINCT CASE WHEN DATE_ADD(first_order_month, INTERVAL 1 MONTH) <= order_month THEN customer_id END) AS cnt_month1
@@ -116,7 +113,6 @@ SELECT first_order_month
 FROM order_records
 GROUP BY 1;
 
--- 3-2. 롤링 리텐션 분석 - cnt / pct
 SELECT first_order_month
      , COUNT(DISTINCT customer_id) AS cnt_month0
      , ROUND(COUNT(DISTINCT CASE WHEN DATE_ADD(first_order_month, INTERVAL 1 MONTH) <= order_month THEN customer_id END) * 100 / COUNT(DISTINCT customer_id), 2) AS pct_month1
