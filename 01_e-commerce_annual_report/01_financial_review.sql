@@ -68,20 +68,37 @@ FROM (SELECT category
       GROUP BY category, sub_category) tbl
 ORDER BY pct_category_sales DESC, pct_sub_category_sales DESC;
 
--- 5. 서브 카테고리별 매출 분석  
+-- 5-1. 서브 카테고리별 매출 분석  
 SELECT sub_category
      , cnt_orders
      , ROUND(sum_sales / cnt_orders, 2) AS per_sales
      , ROUND(sum_sales, 2) AS sub_category_sales
      , ROUND(sum_sales * 100 / SUM(sum_sales) OVER (), 2) AS pct_sub_category_sales
-     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking
+     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking_sales
      , ROUND(sum_discnt, 2) AS sub_category_discnt
      , ROUND(sum_discnt * 100 / SUM(sum_discnt) OVER (), 2) AS pct_sub_category_discnt
      , CASE WHEN sum_discnt >= AVG(sum_discnt) OVER() THEN 1 ELSE 0 END AS above_avg_discnt
+     , DENSE_RANK() OVER (ORDER BY sum_discnt DESC) AS ranking_discnt
 FROM (SELECT sub_category
            , SUM(sales) AS sum_sales
            , SUM(discount) AS sum_discnt
            , COUNT(customer_id) AS cnt_orders
       FROM order_records
       GROUP BY 1) tbl
-ORDER BY ranking;
+ORDER BY ranking_sales;
+
+-- 5-2. 서브 카테고리별 매출 분석  
+SELECT sub_category
+     , ROUND(sum_discnt, 2) AS sub_category_discnt
+     , DENSE_RANK() OVER (ORDER BY sum_discnt DESC) AS ranking_discnt
+     , cnt_orders
+     , DENSE_RANK() OVER (ORDER BY cnt_orders DESC) AS ranking_orders
+     , ROUND(sum_sales, 2) AS sub_category_sales
+     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking_sales
+FROM (SELECT sub_category
+           , SUM(sales) AS sum_sales
+           , SUM(discount) AS sum_discnt
+           , COUNT(customer_id) AS cnt_orders
+      FROM order_records
+      GROUP BY 1) tbl
+ORDER BY ranking_sales;
