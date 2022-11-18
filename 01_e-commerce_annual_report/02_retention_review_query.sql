@@ -81,7 +81,6 @@ FROM (SELECT order_month
       WHERE first_order_month = '2020-08-01' AND first_order_month != order_month
       GROUP BY 1) tbl
 )
-
 SELECT order_month
      , cnt_total_orders
      , ROUND(cnt_total_orders * 100 / SUM(cnt_total_orders) OVER (), 2) AS pct_total_orders
