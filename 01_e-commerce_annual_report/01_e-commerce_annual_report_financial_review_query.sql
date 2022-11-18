@@ -14,7 +14,7 @@ FROM records r
 INNER JOIN customer_stats c ON r.customer_id = c.customer_id
 )
 
--- 2-1. 월별 / 분기별 매출 분석
+-- 2. 월별 / 분기별 매출 분석
 SELECT order_month
      , ROUND(sum_sales, 2) AS monthly_sales
      , ROUND(sum_sales * 100 / SUM(sum_sales) OVER (), 2) AS pct_monthly_sales
@@ -25,7 +25,6 @@ FROM (SELECT order_month
       FROM order_records
       GROUP BY 1) tbl;
 
--- 2-2. 월별 / 분기별 매출 분석 
 SELECT order_month
      , ROUND(sum_sales, 2) AS monthly_sales
      , ROUND(sum_sales * 100 / SUM(sum_sales) OVER (), 2) AS pct_monthly_sales
@@ -35,7 +34,7 @@ FROM (SELECT order_month
       FROM order_records
       GROUP BY 1) tbl;
      
- -- 3-1. 요일별 매출 분석
+ -- 3. 요일별 매출 분석
 SELECT order_month
      , ROUND(SUM(CASE WHEN DAYNAME(order_date) LIKE 'mon%' THEN sales END) * 100 / SUM(sales), 2) AS pct_mon_sales
      , ROUND(SUM(CASE WHEN DAYNAME(order_date) LIKE 'tue%' THEN sales END) * 100 / SUM(sales), 2) AS pct_tue_sales
@@ -47,14 +46,13 @@ SELECT order_month
 FROM order_records
 GROUP BY 1;
 
--- 3-2. 요일별 매출 분석 
 SELECT order_month
      , ROUND(SUM(CASE WHEN WEEKDAY(order_date) BETWEEN 0 AND 4 THEN sales END) * 100 / SUM(sales), 2) AS pct_mon_to_fri_sales
      , ROUND(SUM(CASE WHEN WEEKDAY(order_date) BETWEEN 5 AND 6 THEN sales END) * 100 / SUM(sales), 2) AS pct_sat_to_sun_sales
 FROM order_records
 GROUP BY 1;
      
--- 4. 카테고리별 매출 분석  
+-- 4. 카테고리별 매출 분석 
 SELECT category
      , ROUND(SUM(sum_sales) OVER (PARTITION BY category), 2) AS  category_sales
      , ROUND(SUM(sum_sales) OVER (PARTITION BY category) * 100 / SUM(sum_sales) OVER (), 2) AS pct_category_sales
@@ -68,7 +66,7 @@ FROM (SELECT category
       GROUP BY category, sub_category) tbl
 ORDER BY pct_category_sales DESC, pct_sub_category_sales DESC;
 
--- 5-1. 서브 카테고리별 매출 분석  
+-- 5. 서브 카테고리별 매출 분석  
 SELECT sub_category
      , cnt_orders
      , ROUND(sum_sales / cnt_orders, 2) AS per_sales
@@ -87,7 +85,6 @@ FROM (SELECT sub_category
       GROUP BY 1) tbl
 ORDER BY ranking_sales;
 
--- 5-2. 서브 카테고리별 매출 분석  
 SELECT sub_category
      , ROUND(sum_sales, 2) AS sub_category_sales
      , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking_sales
