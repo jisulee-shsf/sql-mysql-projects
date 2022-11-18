@@ -89,16 +89,16 @@ ORDER BY ranking_sales;
 
 -- 5-2. 서브 카테고리별 매출 분석  
 SELECT sub_category
+     , ROUND(sum_sales, 2) AS sub_category_sales
+     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking_sales
      , ROUND(sum_discnt, 2) AS sub_category_discnt
      , DENSE_RANK() OVER (ORDER BY sum_discnt DESC) AS ranking_discnt
      , cnt_orders
      , DENSE_RANK() OVER (ORDER BY cnt_orders DESC) AS ranking_orders
-     , ROUND(sum_sales, 2) AS sub_category_sales
-     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking_sales
 FROM (SELECT sub_category
            , SUM(sales) AS sum_sales
            , SUM(discount) AS sum_discnt
            , COUNT(customer_id) AS cnt_orders
       FROM order_records
       GROUP BY 1) tbl
-ORDER BY ranking_discnt;
+ORDER BY ranking_sales;
