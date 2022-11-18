@@ -28,7 +28,7 @@ FROM (SELECT order_month
 SELECT order_month
      , ROUND(sum_sales, 2) AS monthly_sales
      , ROUND(sum_sales * 100 / SUM(sum_sales) OVER (), 2) AS pct_monthly_sales
-     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking
+     , DENSE_RANK() OVER (ORDER BY sum_sales DESC) AS ranking_sales
 FROM (SELECT order_month
            , SUM(sales) AS sum_sales
       FROM order_records
