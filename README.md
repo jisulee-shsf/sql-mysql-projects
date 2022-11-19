@@ -4,6 +4,6 @@
 ####
 ## Projects
 #### ► [01_e-commerce_annual_report]  
-- SQL 고급 쿼리 작성 및 Python 데이터 시각화 라이브러리를 활용한 E-Commerce dataset 분석 개인 프로젝트 진행
+- SQL 고급 쿼리 작성 및 Python 데이터 시각화 라이브러리를 활용한 E-Commerce dataset 분석 프로젝트 진행
 - 📌 [E-Commerce Annual Report](https://drive.google.com/file/d/1GmOtYKki2Pe_yD2HCl4fknmf26vY-c1R/view?usp=share_link)
 ####
