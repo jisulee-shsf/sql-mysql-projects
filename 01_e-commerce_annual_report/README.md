@@ -1,7 +1,4 @@
 ####
-## Project
-- [E-Commerce Annual Report](https://drive.google.com/file/d/1GmOtYKki2Pe_yD2HCl4fknmf26vY-c1R/view?usp=share_link)
-####
 ## Objectives
 - SQL 쿼리 작성을 통한 분석 역량 강화
 - Python 라이브러리를 활용한 다양한 데이터 시각화 스킬 향상
