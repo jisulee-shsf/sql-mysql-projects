@@ -1,16 +1,16 @@
 ####
-## Topic
+## Project
 - E-Commerce dataset을 활용한 annual report 작성
 ####
 ## Objectives
-- 복잡한 연산의 데이터를 추출하는 쿼리 작성을 통한 SQL 기반의 분석 역량 강화
-- 추출된 데이터를 Python 라이브러리로 다양한 시각화를 진행함으로써, 데이터 시각화 스킬 향상
-- 매출 및 리텐션 중심의 분석 결과를 반영한 논지 전개를 통해 action item 도출 능력 배양
+- SQL 쿼리 작성을 통한 분석 역량 강화
+- Python 라이브러리를 활용한 데이터 시각화 스킬 향상
+- 분석 결과를 기반한 논지 전개 및 action item 도출 능력 배양
 ####
 ## Stack
 -
     <div align="left"><img src="https://img.shields.io/badge/[ MySQL ]-JOIN / GROUP BY / Pivot Table / SubQuery / Window Function-4479A1"/>
-    <img src="https://img.shields.io/badge/[ Data Analysis ]-Classic Retention / Rolling Retention / Correlation-FF6600"/><br>
+    <img src="https://img.shields.io/badge/[ Data Analysis ]-Correlation / Growth Hacking / AARRR / Classic Retention / Rolling Retention-FF6600"/><br>
 
 - 
     <div align="left"><img src="https://img.shields.io/badge/[ Python ]-pandas / matplotlib / seaborn-3776AB"/>
@@ -18,29 +18,19 @@
 
 ####
 ## Timeline
-- 221107~221110 - E-Commerce dataset 서칭 및 진행 pipeline 설정
-- 221111~221115 - dataset 분석 및 SQL 쿼리 작성
-- 221116~221118 - Data Visualization 진행
-- 221119~221120 - 검토 및 Github 업데이트 완료
+- 221107~221110 - dataset 서칭 및 진행 pipeline 설정
+- 221111~221118 - dataset 분석 및 SQL 쿼리 작성 및 데이터 시각화 진행
+- 221119~221120 - 최종 검토 및 GitHub 업로드 완료
 ####
 ## Contents
-- Download the dataset : Kaggle API를 활용해 dataset 다운로드
-- Explore the data : image / mask 경로 추출 로직 함수화 및 시각화 진행
-- K-Means clustering : cluster center에 기반한 clustering 진행
-- Create a dataframe : image_id / image & mask 경로 / cluster 정보 포함된 dataframe 생성
-- Visualize the data : cluster(stainded & bright-field & fluorescence)에 따른 시각화 진행
-- Find and draw contours : 단일 mask에 대한 외곽선 정보 추출 연습
-- Get annotation information : 전체 mask의 polygon & bounding box 정보 추출 로직 함수화
-- Convert the dataset to COCO format : 추출된 annotation 정보를 활용해 COCO format 변환 로직 함수화
-- Visualize the data using pycocotools : COCO API를 활용해 instance segementation 시각화 진행
-<img src="https://user-images.githubusercontent.com/109773795/183776882-572ee620-287c-4867-8b63-01ac0c32370c.png" width="950" height="150"/>
-<img src="https://user-images.githubusercontent.com/109773795/183776651-838bf36e-336c-4bb2-86e0-2031f8f1a663.png" width="950" height="150"/>
-
+- Financial Review - 월별 및 분기별 / 요일별 / 카테고리별 / 서브 카테고리별 매출 분석
+- Retention Review - 가입 시기별 코호트의 결제 기준, 클래식 리텐션 / 롤링 리텐션 분석
+- Action Item - Financial / Retention Review에 기반의 결과 도출
 ####
 ## Afterthoughts
-- domain knowledge가 없음에도 불구하고, 새롭게 접하는 data를 세부적으로 분석하는 과정이 매우 흥미로웠습니다.
-- COCO dataset 변환 과정을 통해, COCO format의 다양한 annotation 정보를 상세히 이해할 수 있었습니다.
-- annotation 정보를 바탕으로, instance segmentation 진행 과정을 다양하게 실습할 수 있었습니다.
+ - SQL과 Python 스킬을 동시에 적용한 프로젝트인지라 다소 복잡했으나, 분석 결과에 설득력을 더하는 과정이 매우 흥미로웠습니다. 
+ - Python 라이브러리를 활용한 데이터 시각화 외, Tableau 등을 활용한 대시보드 설계 방법을 학습할 예정입니다.
+ - 본 프로젝트에 적용한 분석 이론 외, 추가적인 통계 지식을 쌓아 다양한 논지 전개가 가능하도록 학습할 예정입니다.
 ####
 ## Reference
 - [[Kaggle] United States E-Commerce records 2020](https://www.kaggle.com/datasets/ammaraahmad/us-ecommerce-record-2020)
