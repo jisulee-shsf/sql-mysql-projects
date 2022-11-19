@@ -3,10 +3,9 @@
 - E-Commerce dataset을 활용한 annual report 작성
 ####
 ## Objectives
-- E-Commerce dataset을 분석하는 경험 축적
-- 복잡한 연산의 데이터를 추출하는 쿼리를 작성해 SQL 기반의 분석 역량 강화
-- 추출된 데이터 결과를 Python 라이브러리로 다수의 데이터 시각화 진행
-- AARRR / Cohort / Retention / Correlation 분석을 반영한 논지 전개
+- 복잡한 연산의 데이터를 추출하는 쿼리 작성을 통한 SQL 기반의 분석 역량 강화
+- 추출된 데이터를 Python 라이브러리로 다양한 시각화를 진행함으로써, 데이터 시각화 스킬 향상
+- 매출 및 리텐션 중심의 분석 결과를 반영한 논지 전개를 통해 action item 도출 능력 배양
 ####
 ## Stack
 -
