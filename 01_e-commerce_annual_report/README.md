@@ -7,10 +7,10 @@
 ## Stack
 -
     <div align="left"><img src="https://img.shields.io/badge/[ MySQL ]-JOIN / GROUP BY / Pivot Table / SubQuery / Window Function-4479A1"/>
-    <img src="https://img.shields.io/badge/[ Data Analysis ]-Correlation / Growth Hacking / AARRR / Classic Retention / Rolling Retention-FF6600"/><br>
+    <img src="https://img.shields.io/badge/[ Python ]-pandas / matplotlib / seaborn-3776AB"/><br>
 
 - 
-    <div align="left"><img src="https://img.shields.io/badge/[ Python ]-pandas / matplotlib / seaborn-3776AB"/>
+    <div align="left"><img src="https://img.shields.io/badge/[ Data Analysis ]-Correlation / Growth Hacking / AARRR / Classic Retention / Rolling Retention-FF6600"/>
     <img src="https://img.shields.io/badge/[ Data Visualization ]-catplot / histplot / lineplot / heatmap / pie-FF6600"/><br>  
 
 ####
