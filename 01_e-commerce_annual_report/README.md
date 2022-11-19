@@ -1,6 +1,6 @@
 ####
 ## Project
-- E-Commerce dataset을 활용한 annual report 작성
+- [E-Commerce Annual Report](https://drive.google.com/file/d/1GmOtYKki2Pe_yD2HCl4fknmf26vY-c1R/view?usp=share_link) 작성
 ####
 ## Objectives
 - SQL 쿼리 작성을 통한 분석 역량 강화
