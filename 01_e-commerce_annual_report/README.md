@@ -21,7 +21,7 @@
 ####
 ## Contents
 - Financial Review - 월별 및 분기별 / 요일별 / 카테고리별 / 서브 카테고리별 매출 분석 > SQL 쿼리 작성 및 다양한 데이터 시각화 적용에 집중
-- Retention Review - 가입 시기별 코호트의 결제 기준 클래식 리텐션 / 롤링 리텐션 분석 > 분석 이론 적용에 집중
+- Retention Review - 가입 시기별 코호트의 결제 기준 Classic Retention / Rolling Retention 분석 > 분석 이론 적용에 집중
 - Action Item - Financial / Retention Review에 기반의 결과 도출
 ####
 ## Afterthoughts
