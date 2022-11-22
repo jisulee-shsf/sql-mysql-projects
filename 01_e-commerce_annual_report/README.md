@@ -1,7 +1,7 @@
 ####
 ## Objectives
 - SQL 쿼리 작성을 통한 분석 역량 강화
-- Python 라이브러리를 활용한 다양한 데이터 시각화 스킬 향상
+- Python 라이브러리를 활용한 다양한 data visualization 스킬 향상
 - 분석 결과를 기반한 논지 전개 및 action item 도출 능력 배양
 ####
 ## Skills
@@ -21,7 +21,7 @@
 ####
 ## Contents
 - Financial Review - 월별 및 분기별 ・ 요일별 ・ 카테고리별 ・ 서브 카테고리별 매출 분석 > SQL 쿼리 작성 및 다양한 data visualization 적용에 집중
-- Retention Review - 가입 시기별 코호트의 결제 기준 classic retention ・ rolling retention 분석 > 분석 이론 적용에 집중
+- Retention Review - 가입 시기별 코호트의 결제 기준, classic retention ・ rolling retention 분석 > 분석 이론 적용에 집중
 - Action Item - financial review ・ retention review 기반 결과 도출
 ####
 ## Afterthoughts
