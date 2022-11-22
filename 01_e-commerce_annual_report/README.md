@@ -4,7 +4,7 @@
 - Python 라이브러리를 활용한 다양한 데이터 시각화 스킬 향상
 - 분석 결과를 기반한 논지 전개 및 action item 도출 능력 배양
 ####
-## Stack
+## Skills
 -
     <div align="left"><img src="https://img.shields.io/badge/[MySQL]-JOIN / GROUP BY / Pivot Table / SubQuery / Window Function-4479A1"/>
     <img src="https://img.shields.io/badge/[Python]-pandas / matplotlib / seaborn-3776AB"/><br>
