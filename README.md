@@ -5,5 +5,5 @@
 ## Projects
 #### ► [01_e-commerce_annual_report]  
 - E-Commerce dataset을 활용해 Financial ・ Retention Review 중심의 Annual Report 작성
-- 📌 [E-Commerce Annual Report](https://drive.google.com/file/d/1GmOtYKki2Pe_yD2HCl4fknmf26vY-c1R/view?usp=share_link)
+- 📌 [E-Commerce Annual Report](https://drive.google.com/file/d/1Ho07THRucKU6VuuICFUIdkggulSEe8kU/view?usp=share_link)
 ####
