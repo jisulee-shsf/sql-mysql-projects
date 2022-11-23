@@ -15,11 +15,9 @@
 
 ####
 ## Timeline
-|Date|Process|
-|:---:|:---|
-|221107 ~ 221110|dataset 서칭 및 진행 pipeline 설정|
-|221111 ~ 221118|dataset 분석 후, SQL 쿼리 작성 / data visualization 진행|
-|221119 ~ 221120|최종 검토 및 GitHub 업로드 완료|
+- 221107 ~ 221110 - dataset 서칭 및 진행 pipeline 설정
+- 221111 ~ 221118 - dataset 분석 후, SQL 쿼리 작성 / data visualization 진행
+- 221119 ~ 221120 - 최종 검토 및 GitHub 업로드 완료
 ####
 ## Contents
 - Financial Review - 월별 및 분기별 ・ 요일별 ・ 카테고리별 ・ 서브 카테고리별 매출 분석 > SQL 쿼리 작성 및 다양한 data visualization 적용에 집중
