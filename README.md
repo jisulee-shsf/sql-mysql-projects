@@ -4,6 +4,7 @@
 ####
 ## Projects
 #### ► [01_e-commerce_annual_report]  
-- E-Commerce dataset을 활용해 Financial ・ Retention Review 중심의 Annual Report 작성
+- SQL ・ Python을 활용한 Annual Report 형식의 개인 프로젝트
+- 매출 현황 파악 및 Cohort별 Classic ・ Rolling Retention 분석 진행
 - 📌 [E-Commerce Annual Report](https://drive.google.com/file/d/1Ho07THRucKU6VuuICFUIdkggulSEe8kU/view?usp=share_link)
 ####
