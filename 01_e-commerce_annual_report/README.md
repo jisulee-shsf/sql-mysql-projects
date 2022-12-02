@@ -7,10 +7,10 @@
 ## Skills
 -
     <div align="left"><img src="https://img.shields.io/badge/[MySQL]-JOIN / GROUP BY / Pivot Table / SubQuery / Window Functions 외 다수-4479A1"/>
-    <img src="https://img.shields.io/badge/[Data Analysis]- AARRR / Classic ・ Rolling Retention / Cohort / Correlation-FF6600"/><br>
+    <img src="https://img.shields.io/badge/[data analysis]- AARRR / Classic ・ Rolling Retention / Cohort / Correlation-FF6600"/><br>
 - 
     <div align="left"><img src="https://img.shields.io/badge/[Python]-pandas / matplotlib / seaborn-4479A1"/>
-    <img src="https://img.shields.io/badge/[Data Visualization]-catplot / histplot / lineplot / heatmap / pie-FF6600"/><br>  
+    <img src="https://img.shields.io/badge/[data visualization]-catplot / histplot / lineplot / heatmap / pie-FF6600"/><br>  
     
 - <div align="left">SQL 고급 문법을 활용한 쿼리 작성 / 데이터 분석 방법에 기반한 논지 전개 및 action item 도출
 - <div align="left">Python 라이브러리를 활용한 다양한 data visualization 진행<br>  
